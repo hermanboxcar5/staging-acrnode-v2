@@ -44,7 +44,8 @@ async function timedBonus(token) {
   };
   let ops = '\x22\x7B\x7D\x22';
   let res = await axios.post(
-    "https://dev-nakama.winterpixel.io/v2/rpc/collect_timed_bonus",
+    "https://staging-dev-nakama.winterpixel.io/v2/rpc/collect_timed_bonus",
+    
     ops,
     { headers: headers },
   );
@@ -60,7 +61,7 @@ async function auth(username, password) {
     },
   };
   let res = await axios.post(
-    "https://dev-nakama.winterpixel.io/v2/account/authenticate/email?create=false",
+    "https://staging-dev-nakama.winterpixel.io/v2/account/authenticate/email?create=false",
     payload,
     {
       headers: {
